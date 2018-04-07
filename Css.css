@@ -15,6 +15,25 @@ html,
   letter-spacing: 1px;
 }
 
+.bit10{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/10.gif') no-repeat $theme_color !important;
+}
+.bit100{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/100.gif') no-repeat $theme_color !important;
+}
+.bit1000{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/1000.gif') no-repeat $theme_color !important;
+}
+.bit5000{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/5000.gif') no-repeat $theme_color !important;
+}
+.bit10000{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/10000.gif') no-repeat $theme_color !important;
+}
+.bit10001{
+  background: url('https://cdn.twitchalerts.com/twitch-bits/images/hd/10000.gif') no-repeat $theme_color !important;
+}
+
 .widget-EventList {
   position: absolute;
   top: 0;
@@ -81,11 +100,11 @@ li div {
   line-height: 50px;
   position: relative;
   color: $text_color;
-  -webkit-animation: info .5s ease-in 1 .6s forwards;
-          animation: info .5s ease-in 1 .6s forwards;
+  -webkit-animation: info 3s ease-in 1 .6s forwards;
+          animation: info 3s ease-in 1 .6s forwards;
   background: #ffff;
   width: 200;
-  text-overflow: ellipsis;
+  text-overflow: hidden;
   text-transform: uppercase;
   /* info */
 }
@@ -100,8 +119,8 @@ div.background {
   background: url("http://uploads.twitchalerts.com/000/070/135/721/star-l.png") no-repeat $theme_color;
   float: left;
   margin-left: 0;
-  -webkit-animation: icon .5s ease-in 1 .4s forwards;
-          animation: icon .5s ease-in 1 .4s forwards;
+  -webkit-animation: icon 3s ease-in 1 .4s forwards;
+          animation: icon 3s ease-in 1 .4s forwards;
   /* icon */
 }
 
@@ -147,10 +166,16 @@ div.background {
 }
 
 .message {
-  position: inherit;
-  bottom: -5px;
-  left: inherit;
-  padding-left: 5px;
+  position: sticky;
+  top: 18px;
+  -webkit-animation: icon 3s ease-in 1 .4s forwards;
+  animation: icon 3s ease-in 1 .4s forwards;
+  
+}
+
+.content {
+  -webkit-animation: icon 3s ease-in 1 .4s forwards;
+  animation: icon 3s ease-in 1 .4s forwards;
 }
 
 @-webkit-keyframes grow {
@@ -173,39 +198,57 @@ div.background {
 
 @-webkit-keyframes icon {
   0% {
-    left: -20px;
+    left: 20px;
     opacity: 0;
+    text-indent: 0px;
   }
-  40% {
-    left: 0px;
+  20% {
+    left: 300px;
     opacity: 1;
+    text-indent: 0px;
   }
-  60% {
-    left: 2px;
+  50% {
+    left: 300px;
     opacity: 1;
+    text-indent: 0px;
+  }
+  80% {
+    left: 300px;
+    opacity: 1;
+    text-indent: 0px;
   }
   100% {
-    left: 0px;
+    left: 20;
     opacity: 1;
+    text-indent: 0px;
   }
 }
 
 @keyframes icon {
   0% {
-    left: -20px;
+    left: 20px;
     opacity: 0;
+    text-indent: 0px;
   }
-  40% {
-    left: 0px;
+  20% {
+    left: 300px;
     opacity: 1;
+    text-indent: 0px;
   }
-  60% {
-    left: 2px;
+  50% {
+    left: 300px;
     opacity: 1;
+    text-indent: 0px;
+  }
+  80% {
+    left: 300px;
+    opacity: 1;
+    text-indent: 0px;
   }
   100% {
-    left: 0px;
+    left: 20;
     opacity: 1;
+    text-indent: 0px;
   }
 }
 
@@ -215,20 +258,25 @@ div.background {
     opacity: 0;
     text-indent: 0px;
   }
-  40% {
-    left: 50px;
+  20% {
+    left: 300px;
     opacity: 1;
     text-indent: 0px;
   }
-  60% {
-    left: 20px;
+  50% {
+    left: 300px;
+    opacity: 1;
+    text-indent: 0px;
+  }
+  80% {
+    left: 300px;
     opacity: 1;
     text-indent: 10px;
   }
   100% {
-    left: 0;
+    left: 20;
     opacity: 1;
-    text-indent: 0px;
+    text-indent: 10px;
   }
 }
 
@@ -238,19 +286,24 @@ div.background {
     opacity: 0;
     text-indent: 0px;
   }
-  40% {
-    left: 50px;
+  20% {
+    left: 300px;
     opacity: 1;
     text-indent: 0px;
   }
-  60% {
-    left: 20px;
+  50% {
+    left: 300px;
+    opacity: 1;
+    text-indent: 0px;
+  }
+  80% {
+    left: 300px;
     opacity: 1;
     text-indent: 10px;
   }
   100% {
-    left: 0;
+    left: 20;
     opacity: 1;
-    text-indent: 0px;
+    text-indent: 10px;
   }
 }
